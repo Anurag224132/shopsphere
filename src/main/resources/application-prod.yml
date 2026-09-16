@@ -1,0 +1,19 @@
+# =====================================================
+# PRODUCTION Profile
+# Activated by: spring.profiles.active=prod
+# =====================================================
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate     # never modify schema in production
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+
+logging:
+  level:
+    root: WARN
+    shopsphere.backend: INFO
+    org.springframework.security: WARN
