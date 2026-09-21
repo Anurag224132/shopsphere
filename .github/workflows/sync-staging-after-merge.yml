@@ -29,6 +29,6 @@ jobs:
 
       - name: Reset staging to main
         run: |
-          git checkout staging
-          git reset --hard origin/main
+          git fetch origin staging
+          git checkout -B staging origin/main
           git push origin staging --force
