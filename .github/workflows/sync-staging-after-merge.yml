@@ -1,3 +1,8 @@
+# This workflow automatically syncs the staging branch with main after every PR merge.
+# Workflow: feature/* → staging (test) → main (production)
+# After merging staging → main, this action resets staging to match main exactly,
+# so the next feature branch always starts from a clean, up-to-date base.
+
 name: Sync staging with main after merge
 
 on:
