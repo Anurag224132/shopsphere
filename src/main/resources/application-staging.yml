@@ -6,7 +6,7 @@
 spring:
   jpa:
     hibernate:
-      ddl-auto: validate     # validates schema matches entities — no structural changes
+      ddl-auto: validate
     show-sql: true
     properties:
       hibernate:
