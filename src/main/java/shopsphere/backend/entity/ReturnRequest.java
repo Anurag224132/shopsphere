@@ -30,7 +30,7 @@ public class ReturnRequest {
     private String reason;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "status", nullable = false)
+    @Column(name = "status", nullable = false, length = 20)
     private ReturnStatus status;
 
     @Column(name = "requested_at", nullable = false, updatable = false)
@@ -40,6 +40,6 @@ public class ReturnRequest {
     private LocalDateTime processedAt;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "refund_status", nullable = false)
+    @Column(name = "refund_status", nullable = false, length = 20)
     private RefundStatus refundStatus;
 }

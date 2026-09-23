@@ -33,7 +33,7 @@ public class User extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID userId;
 
-    @Column(name = "name", nullable = false, length = 255)
+    @Column(name = "name", nullable = false, length = 120)
     private String name;
 
     @Column(name = "email", nullable = false, length = 255)
@@ -46,7 +46,7 @@ public class User extends BaseEntity {
     @Column(name = "role", nullable = false)
     private UserRole role;
 
-    @Column(name = "mobile_number", nullable = false, length = 10)
+    @Column(name = "mobile_number", nullable = false, length = 20)
     private String mobileNumber;
 
     @Enumerated(EnumType.STRING)

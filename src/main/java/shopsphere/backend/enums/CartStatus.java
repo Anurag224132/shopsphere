@@ -2,6 +2,6 @@ package shopsphere.backend.enums;
 
 public enum CartStatus {
     ACTIVE,
-    COMPLETED,
+    CHECKED_OUT,
     ABANDONED
 }

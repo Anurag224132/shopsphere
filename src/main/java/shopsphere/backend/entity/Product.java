@@ -26,10 +26,10 @@ public class Product extends BaseEntity {
     @Column(name = "product_id", nullable = false, updatable = false)
     private UUID productId;
 
-    @Column(name = "sku", nullable = false, updatable = false, length = 255)
+    @Column(name = "sku", nullable = false, updatable = false, length = 64)
     private String sku;
 
-    @Column(name = "name", nullable = false, length = 255)
+    @Column(name = "name", nullable = false, length = 200)
     private String name;
 
     @Column(name = "price", nullable = false, precision = 19, scale = 2)
@@ -38,7 +38,7 @@ public class Product extends BaseEntity {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "status", nullable = false)
+    @Column(name = "status", nullable = false, length = 20)
     @Enumerated(EnumType.STRING)
     private ProductStatus status;
 
