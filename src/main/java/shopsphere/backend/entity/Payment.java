@@ -53,13 +53,13 @@ public class Payment extends BaseEntity {
     private String currency;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "payment_method", nullable = false, updatable = false)
+    @Column(name = "payment_method", nullable = false, updatable = false,length = 20)
     private PaymentMethod paymentMethod;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "status", nullable = false)
+    @Column(name = "status", nullable = false, length = 20)
     private PaymentStatus status;
 
-    @Column(name = "transaction_reference", unique = true)
+    @Column(name = "transaction_reference", unique = true, length = 20)
     private String transactionReference;
 }

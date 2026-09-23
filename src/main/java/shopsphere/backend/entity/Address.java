@@ -33,7 +33,7 @@ public class Address extends BaseEntity{
     @Column(name = "name",length = 255,nullable = false)
     private String name;
 
-    @Column(name = "phone_number", nullable = false, length = 10)
+    @Column(name = "phone_number", nullable = false, length = 20)
     private String phoneNumber;
 
     @Column(name = "address_line_1", nullable = false)
@@ -52,6 +52,6 @@ public class Address extends BaseEntity{
     private String country;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "address_type", nullable = false)
+    @Column(name = "address_type", nullable = false, length = 10)
     private AddressType addressType;
 }

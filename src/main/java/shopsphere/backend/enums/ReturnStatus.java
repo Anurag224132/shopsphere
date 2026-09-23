@@ -4,6 +4,5 @@ public enum ReturnStatus {
     REQUESTED,
     APPROVED,
     REJECTED,
-    COMPLETED,
-    CANCELLED
+    UNDER_INSPECTION
 }

@@ -26,7 +26,7 @@ public class Order extends BaseEntity{
     private User user;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "status",nullable = false)
+    @Column(name = "status",nullable = false, length = 20)
     private OrderStatus status;
 
     @Column(name = "currency", nullable = false, length = 3)
@@ -41,10 +41,10 @@ public class Order extends BaseEntity{
     )
     private BigDecimal totalAmount;
 
-    @Column(name = "shipping_name", nullable = false, length = 255)
+    @Column(name = "shipping_name", nullable = false, length = 120)
     private String shippingName;
 
-    @Column(name = "shipping_phone_number", nullable = false, length = 10)
+    @Column(name = "shipping_phone_number", nullable = false, length = 20)
     private String shippingPhoneNumber;
 
     @Column(name = "shipping_address_line_1", nullable = false)
@@ -53,19 +53,19 @@ public class Order extends BaseEntity{
     @Column(name = "shipping_address_line_2")
     private String shippingAddressLine2;
 
-    @Column(name = "shipping_landmark",length = 255)
+    @Column(name = "shipping_landmark")
     private String shippingLandmark;
 
-    @Column(name = "shipping_city", nullable = false, length = 255)
+    @Column(name = "shipping_city", nullable = false)
     private String shippingCity;
 
-    @Column(name = "shipping_state",nullable = false,length = 255)
+    @Column(name = "shipping_state",nullable = false)
     private String shippingState;
 
-    @Column(name = "shipping_country",nullable = false,length = 255)
+    @Column(name = "shipping_country",nullable = false)
     private String shippingCountry;
 
-    @Column(name = "shipping_pincode", nullable = false, length = 10)
+    @Column(name = "shipping_pincode", nullable = false, length = 12)
     private String shippingPincode;
 
 

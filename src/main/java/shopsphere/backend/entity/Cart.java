@@ -29,7 +29,7 @@ public class Cart extends BaseEntity{
     private UUID cartId;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "status",nullable = false)
+    @Column(name = "status",nullable = false, length = 20)
     private CartStatus status;
 
     @ManyToOne

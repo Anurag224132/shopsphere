@@ -21,16 +21,16 @@ public class AuditLog {
     private UUID auditLogId;
 
     @ManyToOne
-    @JoinColumn(name = "user_id",nullable = false,updatable = false)
+    @JoinColumn(name = "user_id",updatable = false)
     private User user;
 
-    @Column(name = "action", nullable = false, length = 100)
+    @Column(name = "action", nullable = false, length = 80)
     private String action;
 
-    @Column(name = "entity_type", nullable = false, length = 100)
+    @Column(name = "entity_type", nullable = false, length = 60)
     private String entityType;
 
-    @Column(name = "entity_id", nullable = false)
+    @Column(name = "entity_id", nullable = false, length = 64)
     private UUID entityId;
 
     @Column(name = "description", nullable = false)
